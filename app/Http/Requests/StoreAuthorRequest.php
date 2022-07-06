@@ -13,7 +13,7 @@ class StoreAuthorRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,7 @@ class StoreAuthorRequest extends FormRequest
     {
         return [
             //
+            'name' => ['required', 'unique:authors', 'max:255']
         ];
     }
 }
