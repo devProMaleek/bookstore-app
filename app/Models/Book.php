@@ -12,6 +12,9 @@ class Book extends Model
 
     protected $fillable = ['name', 'description', 'publication_year'];
 
+    protected $hidden = ['laravel_through_key', 'created_at', 'updated_at'];
+
+
     /**
      * Get all of the authors for the Book
      *
